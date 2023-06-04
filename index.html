@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body id="root">
+    <header>
+      <p hidden>Weather Project/Olga SAVELIEVA/SheCodes</p>
+    </header>
+    <main class="App">
+      <div class="container">
+        <div class="Weather">
+          <div class="weather-location">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    id="city-input"
+                    class="btn-city form-control search-input"
+                    name="q"
+                    placeholder="Enter a city…"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-3 p-0">
+                  <button
+                    class="btn btn-primary w-100"
+                    type="submit"
+                    value="Search"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="weather-info">
+            <div class="row">
+              <div class="col-6">
+                <h1 id="city">Paris</h1>
+                <ul>
+                  <li>
+                    <span class="time" id="date"></span>, 
+                  <span id="description"></span>
+                  <li>
+                    Humidity: <strong id="humidity"></strong
+                    > %, Wind:
+                    <strong id="wind"></strong> km/h
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-8">
+                <div class="temperature-container d-flex justify-content-end">
+                  <img
+                    src="./images/clear-day.svg"
+                    alt="#"
+                    width="140"
+                    height="140"
+                    id="icon"
+                  />
+                  <div>
+                    <span class="temperature" id="temperature">17</span>
+                    <span class="units">
+                      <a href="#" id="convertTemp" class="degrees">°C</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="WeatherForecast row" id="forecast">
+           
+          </div>
+          <footer>
+            This project was coded by <a href="https://www.linkedin.com/in/olga-savelieva-546397257/">Olga SAVELIEVA</a> and is
+            <a href="">Open-source code</a> and
+            <a href=""> hosted on Netlify.</a>
+            <p hidden>Free to use animated SVG weather icons. Handcrafted by Bas Milius. https://basmilius.github.io/weather-icons/index-fill.html</p>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
